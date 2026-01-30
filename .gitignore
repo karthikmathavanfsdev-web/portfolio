@@ -42,3 +42,6 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# EmailJS Secrets
+src/environments/environment*.ts

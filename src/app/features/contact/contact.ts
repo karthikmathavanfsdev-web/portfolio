@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 
 import emailjs from 'emailjs-com';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-contact',
@@ -25,9 +26,10 @@ export class Contact implements OnInit {
   errorMsg = false;
 
   // ✅ EmailJS Config
-  private readonly PUBLIC_KEY = '5tWjjVXUa1zgFL1-B';
-  private readonly SERVICE_ID = 'service_qg2ulee';
-  private readonly TEMPLATE_ID = 'template_k96grnk';
+  private readonly PUBLIC_KEY = environment.emailJs.publicKey;
+  private readonly SERVICE_ID = environment.emailJs.serviceId;
+  private readonly TEMPLATE_ID = environment.emailJs.templateId;
+
 
   constructor(private fb: FormBuilder) {}
 
