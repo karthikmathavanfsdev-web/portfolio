@@ -1,0 +1,163 @@
+/* ================================
+   EXPERIENCE SECTION
+================================ */
+
+.experience-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+/* Title */
+
+.section-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Vertical Line */
+
+.timeline-line {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+  background: #c7d2fe;
+}
+
+/* Item */
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 60px;
+}
+
+/* Dot */
+
+.timeline-dot {
+  position: absolute;
+
+  left: 7px;
+  top: 20px;
+
+  width: 18px;
+  height: 18px;
+
+  background: var(--primary);
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 6px #e0e7ff;
+}
+
+/* Card */
+
+.timeline-card {
+  background: #f8fafc;
+
+  padding: 28px;
+  border-radius: 18px;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+
+.timeline-card h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+/* Company */
+
+.company {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Date */
+
+.timeline-date {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* List */
+
+.timeline-card ul {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.timeline-card li {
+  margin-bottom: 10px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+  }
+
+}
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-theme .experience-section {
+  background: #020617;
+}
+
+body.dark-theme .timeline-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+
+body.dark-theme .timeline-card li {
+  color: #94a3b8;
+}
+
+body.dark-theme .timeline-date {
+  color: #94a3b8;
+}
+
+body.dark-theme .timeline-line {
+  background: #1e293b;
+}

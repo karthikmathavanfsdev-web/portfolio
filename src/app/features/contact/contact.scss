@@ -1,0 +1,130 @@
+/* Main Box */
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 18px 20px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  text-decoration: none;
+  color: #0f172a;
+
+  transition: all 0.3s ease;
+
+  min-width: 0; /* IMPORTANT */
+}
+
+/* Hover Effect */
+
+.contact-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Icon Container */
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+  font-size: 22px;
+  line-height: 1;
+
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.icon-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Colors */
+
+.icon-box.email {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.icon-box.whatsapp {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.icon-box.linkedin {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.icon-box.github {
+  background: #f1f5f9;
+  color: #020617;
+}
+
+/* Text Container */
+
+.contact-info {
+  flex: 1;        /* TAKE AVAILABLE SPACE */
+  min-width: 0;  /* VERY IMPORTANT */
+}
+
+/* Subtitle */
+
+.contact-info small {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Main Text (Email Fix) */
+
+.contact-info h6 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Arrow */
+
+.arrow {
+  margin-left: auto;
+  font-size: 18px;
+  color: #94a3b8;
+  transition: transform 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.contact-box:hover .arrow {
+  transform: translateX(5px);
+  color: var(--primary);
+}
+
+/* Dark Mode */
+
+body.dark-theme .contact-box {
+  background: #020617;
+  border-color: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark-theme .contact-info small {
+  color: #94a3b8;
+}

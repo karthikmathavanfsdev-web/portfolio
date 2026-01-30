@@ -1,0 +1,248 @@
+<section class="container py-5" id="contact">
+
+  <!-- HEADER -->
+  <div class="text-center mb-5">
+
+    <span class="text-primary fw-bold">CONTACT</span>
+
+    <h2 class="fw-bold mt-2">
+      Let's Build Something
+      <span class="text-primary">Great Together</span>
+    </h2>
+
+    <p class="text-muted mt-3">
+      Ready to start your project? Get in touch for a free consultation.
+    </p>
+
+  </div>
+
+
+  <div class="row g-4">
+
+    <!-- LEFT -->
+    <div class="col-lg-6">
+
+      <h4 class="fw-bold mb-3">Get in Touch</h4>
+
+      <p class="text-muted">
+        Whether you need web apps, APIs, or consulting,
+        I'm here to help.
+      </p>
+
+
+      <!-- CONTACT LINKS -->
+      <div class="row g-3 mb-4">
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <a
+            href="mailto:karthikmathavan.fsdev@gmail.com"
+            target="_blank"
+            class="contact-box">
+
+            <div class="icon-box email">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+
+            <div class="contact-info">
+              <small>Email</small>
+              <h6>karthikmathavan.fsdev@gmail.com</h6>
+            </div>
+
+            <i class="bi bi-arrow-right arrow"></i>
+
+          </a>
+        </div>
+
+
+        <!-- WhatsApp -->
+        <div class="col-md-6">
+          <a
+            href="https://wa.me/919894914912"
+            target="_blank"
+            class="contact-box">
+
+            <div class="icon-box whatsapp">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+
+            <div class="contact-info">
+              <small>WhatsApp</small>
+              <h6>Chat on WhatsApp</h6>
+            </div>
+
+            <i class="bi bi-arrow-right arrow"></i>
+
+          </a>
+        </div>
+
+
+        <!-- LinkedIn -->
+        <div class="col-md-6">
+          <a
+            href="https://www.linkedin.com/in/karthik-mathavan-full-stack-developer"
+            target="_blank"
+            class="contact-box">
+
+            <div class="icon-box linkedin">
+              <i class="bi bi-linkedin"></i>
+            </div>
+
+            <div class="contact-info">
+              <small>LinkedIn</small>
+              <h6>Connect on LinkedIn</h6>
+            </div>
+
+            <i class="bi bi-arrow-right arrow"></i>
+
+          </a>
+        </div>
+
+
+        <!-- GitHub -->
+        <div class="col-md-6">
+          <a
+            href="https://github.com/karthikmathavanfsdev-web/"
+            target="_blank"
+            class="contact-box">
+
+            <div class="icon-box github">
+              <i class="bi bi-github"></i>
+            </div>
+
+            <div class="contact-info">
+              <small>GitHub</small>
+              <h6>View my repos</h6>
+            </div>
+
+            <i class="bi bi-arrow-right arrow"></i>
+
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="col-lg-6">
+
+      <div class="card shadow p-4">
+
+        <h4 class="fw-bold mb-3">Send a Message</h4>
+
+
+        <!-- FORM -->
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()">
+
+
+          <!-- NAME -->
+          <div class="mb-3">
+
+            <label class="form-label">Name</label>
+
+            <input
+              class="form-control"
+              formControlName="name">
+
+            <small
+              class="text-danger"
+              *ngIf="f['name'].touched && f['name'].invalid">
+
+              Name is required (Min 3 chars)
+
+            </small>
+
+          </div>
+
+
+          <!-- EMAIL -->
+          <div class="mb-3">
+
+            <label class="form-label">Email</label>
+
+            <input
+              class="form-control"
+              formControlName="email">
+
+            <small
+              class="text-danger"
+              *ngIf="f['email'].touched && f['email'].invalid">
+
+              Enter valid email
+
+            </small>
+
+          </div>
+
+
+          <!-- SUBJECT -->
+          <div class="mb-3">
+
+            <label class="form-label">Subject</label>
+
+            <input
+              class="form-control"
+              formControlName="subject">
+
+          </div>
+
+
+          <!-- MESSAGE -->
+          <div class="mb-3">
+
+            <label class="form-label">Message</label>
+
+            <textarea
+              rows="4"
+              class="form-control"
+              formControlName="message">
+            </textarea>
+
+          </div>
+
+
+          <!-- SUCCESS -->
+          <div
+            *ngIf="successMsg"
+            class="alert alert-success">
+
+            ✅ Message sent successfully!
+
+          </div>
+
+
+          <!-- ERROR -->
+          <div
+            *ngIf="errorMsg"
+            class="alert alert-danger">
+
+            ❌ Failed to send. Please try WhatsApp.
+
+          </div>
+
+
+          <!-- SUBMIT -->
+          <button
+            type="submit"
+            [disabled]="contactForm.invalid || loading"
+            class="btn btn-primary w-100 py-2">
+
+            <span *ngIf="!loading">Send Message</span>
+            <span *ngIf="loading">Sending...</span>
+
+          </button>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

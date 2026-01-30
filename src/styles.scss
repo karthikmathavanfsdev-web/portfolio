@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+
+  --primary: #2563eb;
+  --secondary: #64748b;
+
+  --font-main: 'Inter', sans-serif;
+
+  --bg-light: #ffffff;
+  --bg-section: #f8fafc;
+
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
