@@ -24,10 +24,7 @@ export class Contact implements OnInit {
   successMsg = false;
   errorMsg = false;
 
-  // ✅ EmailJS Config
-  private readonly PUBLIC_KEY = '5tWjjVXUa1zgFL1-B';
-  private readonly SERVICE_ID = 'service_qg2ulee';
-  private readonly TEMPLATE_ID = 'template_k96grnk';
+
 
   constructor(private fb: FormBuilder) {}
 
