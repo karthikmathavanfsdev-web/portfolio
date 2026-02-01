@@ -1,0 +1,154 @@
+/* ================================
+   SKILLS SECTION
+================================ */
+
+.skills-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+/* Title */
+
+.section-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+/* Cards */
+
+.skill-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+}
+
+/* Head */
+
+.skill-card h5 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Dot */
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.frontend { background: #0ea5e9; }
+.dot.backend { background: #a855f7; }
+.dot.database { background: #22c55e; }
+.dot.tools { background: #f97316; }
+
+/* Item */
+
+.skill-item {
+  margin-bottom: 16px;
+}
+
+/* Header */
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Bar */
+
+.skill-bar {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Fill */
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+
+  border-radius: 999px;
+
+  --target-width: 0%;
+
+  transition: width 1.5s ease-in-out;
+}
+
+/* Colors */
+
+.skill-fill.frontend {
+  background: linear-gradient(90deg,#0ea5e9,#06b6d4);
+}
+
+.skill-fill.backend {
+  background: linear-gradient(90deg,#a855f7,#ec4899);
+}
+
+.skill-fill.database {
+  background: linear-gradient(90deg,#22c55e,#4ade80);
+}
+
+.skill-fill.tools {
+  background: linear-gradient(90deg,#f97316,#fb923c);
+}
+
+/* Show */
+
+.skill-fill.show {
+  width: var(--target-width);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 32px;
+  }
+
+}
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-theme .skills-section {
+  background: #020617;
+}
+
+body.dark-theme .skill-card {
+  background: #020617;
+  border-color: #1e293b;
+}
+
+body.dark-theme .skill-bar {
+  background: #1e293b;
+}
+
+body.dark-theme .skill-head {
+  color: #e2e8f0;
+}

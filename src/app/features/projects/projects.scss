@@ -1,0 +1,153 @@
+/* ================================
+   PROJECTS SECTION
+================================ */
+
+.projects-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+/* Title */
+
+.section-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+.section-desc {
+  max-width: 700px;
+  margin: 16px auto 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* Card */
+
+.project-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 40px;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+/* Left */
+
+.project-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+
+  background: #e0e7ff;
+  color: var(--primary);
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.project-tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.project-left h4 {
+  font-weight: 700;
+}
+
+/* Tech */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tags span {
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* Right */
+
+.project-right h6 {
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.project-right p {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.project-right ul {
+  padding-left: 18px;
+  color: var(--primary);
+}
+
+.project-right li {
+  margin-bottom: 6px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+
+}
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-theme .projects-section {
+  background: #020617;
+}
+
+body.dark-theme .project-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+
+body.dark-theme .project-right p {
+  color: #94a3b8;
+}
+
+body.dark-theme .tech-tags span {
+  background: #020617;
+  border: 1px solid #1e293b;
+}

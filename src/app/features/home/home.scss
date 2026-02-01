@@ -1,0 +1,240 @@
+/* ================================
+   HERO SECTION - LOVABLE STYLE
+================================ */
+
+.hero-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    /* Grid */
+    linear-gradient(to right, rgba(15,23,42,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,23,42,0.03) 1px, transparent 1px),
+
+    /* Left Glow */
+    radial-gradient(circle at 20% 30%, rgba(59,130,246,0.18), transparent 45%),
+
+    /* Right Glow */
+    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.18), transparent 45%),
+
+    /* Base */
+    #f8fafc;
+
+  background-size:
+    40px 40px,
+    40px 40px,
+    100% 100%,
+    100% 100%,
+    cover;
+}
+
+/* Keep Content Above Background */
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================================
+   BADGE
+================================ */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: rgba(224,231,255,0.9);
+  color: #2563eb;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 24px;
+
+  backdrop-filter: blur(6px);
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #020617;
+}
+
+.hero-title span {
+  color: var(--primary);
+  position: relative;
+}
+
+.hero-title span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 4px;
+
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* ================================
+   SUBTITLE
+================================ */
+
+.hero-subtitle {
+  font-size: 38px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.hero-desc {
+  max-width: 720px;
+  margin: 0 auto 32px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* Tech Highlight */
+
+.tech {
+  background: #e0e7ff;
+  color: #2563eb;
+
+  padding: 2px 8px;
+  border-radius: 6px;
+
+  font-weight: 600;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  margin-bottom: 36px;
+}
+
+/* Primary Button */
+
+.hero-actions .btn-primary {
+  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+}
+
+/* Outline Button */
+
+.hero-actions .btn-outline-primary:hover {
+  background: #eff6ff;
+}
+
+/* ================================
+   TECH STACK
+================================ */
+
+.hero-stack {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-stack span {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #334155;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+
+.hero-stack span:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #2563eb;
+
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+  }
+}
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-theme .hero-section {
+  background:
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px),
+
+    radial-gradient(circle at 20% 30%, rgba(59,130,246,0.25), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.25), transparent 45%),
+
+    #020617;
+}
+
+body.dark-theme .hero-title,
+body.dark-theme .hero-subtitle {
+  color: #e2e8f0;
+}
+
+body.dark-theme .hero-desc {
+  color: #94a3b8;
+}
+
+body.dark-theme .hero-stack span {
+  background: #020617;
+  border-color: #1e293b;
+  color: #cbd5f5;
+}
